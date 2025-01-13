@@ -1,0 +1,50 @@
+graph LR
+
+  subgraph Teams
+    direction LR
+        
+    subgraph Transformation_group[Workspace]
+      Trans[ORG-IST-Enterprise-Architecture]
+    end
+      
+    Trans --> Trans_members[Workspace members]
+    Trans_members --> Trans_EAs[EAs]
+      
+  end
+
+subgraph Email
+  direction LR
+  subgraph COI_group[Distribution List]
+    COI[IST Architecture Community of Interest]
+    OtherParties[Other Interested Parties]
+  end    
+
+  COI --> Practice[IST Architecture Practice]
+
+  subgraph Practice_group[Distribution List]
+    Practice
+    Other[Other Architects]
+  end    
+
+  subgraph Architect_groups[Distribution List]
+    EA[IST Enterprise Architects]
+    DA[IST Domain Architects]
+    SA[IST Solution Architects]
+  end
+
+  Practice --> EA
+  Practice --> DA
+  Practice --> SA
+  
+
+
+  EA --> EAs
+  DA --> DAs
+  SA --> SAs
+end
+
+  style COI fill:#808080
+  style Practice fill:#808080
+  style EA fill:#808080
+  style DA fill:#808080
+  style SA fill:#808080 
