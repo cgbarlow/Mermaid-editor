@@ -1,0 +1,12 @@
+graph TD
+    A[Start] --> B{Is it?}
+    B -- Yes --> C[OK]
+    C --> D[Rethink]
+    D --> B
+    B -- No --> E[End]
+
+click A "A"
+click B "B"
+click C "C"
+click D "D"
+click E "E"
